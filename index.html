@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<!-- 
+		NOTE ALL MUSIC COMES FROM http://www.bensound.com 
+		I do not take any credit for it 
+		And the cookie monster came from deviant art :)
+		I don't take credit for that either! :D
+	-->
+  <head>
+	<link rel="icon" href="/Cookie_Monster_Awesome_Smiley_by_kreme_cc.png">
+	<title>nicefeels.com</title>
+	<style>
+		html 
+		{ 
+			width:100%; 
+			height:100%; 
+		}
+		
+		p.sansserif 
+		{
+			font-family: Tahoma, Geneva, sans-serif;
+			font-size: 125%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		img.centerThis 
+		{
+			text-align:center;
+		}
+		body 
+		{
+			background-color: #b0c4de;
+		}
+		div.center
+		{
+			margin-left: auto;
+			margin-right: auto;
+			width: 75%;
+		}
+		#video
+		{
+			background-color: green;
+		}
+		#footer
+		{
+			width:100%;
+			height:80px;
+			position:absolute;
+			bottom: 5%;
+		}
+	</style>
+  </head>
+  <body>
+	
+	<div class = "center">
+		<p class = "sansserif"><br>Just listen to some Jazz</p>
+		<p class = "sansserif"><br>Client Meeting: Glass Room 6, 3.00pm Wednesday 4th February</p>
+		<a href = "http://mycroft.netsoc.ie/"><br>Submission Deadlines</a>
+		<p id = "timer" class = "sansserif"></p> 
+		<p id = "activeListening" class = "sansserif"></p>
+		<!-- <img class = "centerThis" src="jazz-flute-gif.gif" alt="Epic Jazz"> -->
+		<!-- <div>
+			<iframe width="720" height="375" src="http://www.youtube.com/embed/ZJu7Kf6mz0M"></iframe>
+		</div> -->
+		<div>
+			<!-- <audio loop autoplay>
+				<source src="Music/BenSound.com/bensound-jazzcomedy.mp3" type ="audio/mpeg">
+			</audio> -->
+      <!--
+			<audio loop autoplay>
+				<source src="Music/BenSound.com/bensound-romantic.mp3" type ="audio/mpeg">
+			</audio>
+      -->
+			<br>
+      
+			<audio loop autoplay>
+				<source src="Music/BenSound.com/bensound-thejazzpiano.mp3" type ="audio/mpeg">
+			</audio>
+      
+      <!--
+			<audio loop autoplay>
+				<source src="Music/BenSound.com/bensound-thelounge.mp3" type ="audio/mpeg">
+			</audio> -->
+			<br>
+		</div>
+		<!-- <form name = "myWebForm" >
+			<input type = "hidden" name = "MAX_FILE_SIZE" value = "500" />
+			<input type = "file" name = "uploadField" />
+		</form> -->
+	</div>
+	<script>
+		var start = new Date(0);
+		var timeSpent = setInterval( function() { timeSpentFun() }, 1000 );
+		var currenTime = setInterval( function() { myTimer() }, 1000 );
+		
+		function myTimer() 
+		{
+			document.getElementById("timer").innerHTML = "Current Time: " + formatTime24(new Date());
+		}
+		
+		function formatTime24(date)
+		{
+			var secs = date.getSeconds();
+			var mins = date.getMinutes();
+			var hrs = date.getHours();
+			
+			var h = (hrs < 10) ?"0" + hrs : hrs;
+			var m = (mins < 10) ?"0" + mins : mins;
+			var s = (secs < 10) ?"0" + secs : secs;
+			
+			return  h + ":" + m + ":" + s;
+		}
+		
+		function timeSpentFun()
+		{
+			start.setSeconds(start.getSeconds() + 1);
+			document.getElementById("activeListening").innerHTML = "Time spent on here: " + formatTime24(start);
+		}
+		
+	</script>
+	<!-- div id = "footer" align = "center">
+		<p>Created by Simon Markham </p>
+		<p>Also check these websites out too!</p>
+		<a href="http://daftpuns.com/">Pun-tacular!</a>
+		<a href="http://draftrepo.com/">DraftRepo.com</a>
+	</div> -->
+	</body>
+</html>
